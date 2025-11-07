@@ -22,10 +22,18 @@ jobs:
           # Use Ruby to validate the formula syntax
           ruby -c Formula/mental-note.rb
 
+      - name: Set up tap
+        run: |
+          # Create a local tap from this repository
+          REPO_PATH="${GITHUB_WORKSPACE}"
+          TAP_PATH="$(brew --repository)/Library/Taps/test"
+          mkdir -p "$TAP_PATH"
+          ln -s "$REPO_PATH" "$TAP_PATH/homebrew-mental-note"
+
       - name: Test formula installation
         run: |
-          # Install directly from the formula file
-          brew install --formula --build-from-source ./Formula/mental-note.rb
+          # Install from the local tap
+          brew install --build-from-source test/mental-note/mental-note
 
       - name: Test binary execution
         run: |
