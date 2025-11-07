@@ -4,7 +4,7 @@ class MentalNote < Formula
   desc "Zero-dependency CLI for managing mental notes, tasks, and ideas"
   homepage "https://github.com/julianpaez/cli-mental-note"
   license "MIT"
-  version "1.0.0"
+  version "1.1.0"
 
   # Download URL - Points to tar.gz in this repository's releases/ folder
   # When hosting in GitHub, this will be:
@@ -48,8 +48,8 @@ class MentalNote < Formula
 
   test do
     # Test that the binary runs and shows version
-    assert_match "1.0.0", shell_output("#{bin}/mental-note --version")
-    assert_match "1.0.0", shell_output("#{bin}/mn --version")
+    assert_match "1.1.0", shell_output("#{bin}/mental-note --version")
+    assert_match "1.1.0", shell_output("#{bin}/mn --version")
 
     # Test basic functionality
     system "#{bin}/mental-note", "version"
