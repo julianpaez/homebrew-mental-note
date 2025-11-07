@@ -9,8 +9,8 @@ class MentalNote < Formula
   # Download URL - Points to tar.gz in this repository's releases/ folder
   # When hosting in GitHub, this will be:
   # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v1.0.0-darwin-arm64.tar.gz
-  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v1.0.0-darwin-arm64.tar.gz"
-  sha256 "ccb953a0dfd5171cd55a12d6860146a528c0ce023f2f9704b75492132d8e7e45"
+  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v1.1.0-darwin-arm64.tar.gz"
+  sha256 "f9cf5ea9ee0b631c2899335373ede175dcae71147b3eeb85601b9fc45f9f3c1b"
 
   # System requirements
   depends_on :macos
