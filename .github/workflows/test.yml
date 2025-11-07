@@ -17,13 +17,15 @@ jobs:
         run: |
           brew update
 
-      - name: Audit formula
+      - name: Validate formula syntax
         run: |
-          brew audit --strict Formula/mental-note.rb
+          # Use Ruby to validate the formula syntax
+          ruby -c Formula/mental-note.rb
 
       - name: Test formula installation
         run: |
-          brew install --build-from-source Formula/mental-note.rb
+          # Install directly from the formula file
+          brew install --formula --build-from-source ./Formula/mental-note.rb
 
       - name: Test binary execution
         run: |

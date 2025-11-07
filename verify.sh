@@ -68,17 +68,15 @@ else
     exit 1
 fi
 
-# Check 6: Formula syntax (requires Homebrew)
-if command -v brew &> /dev/null; then
-    echo -n "✓ Auditing formula syntax... "
-    if brew audit --strict Formula/mental-note.rb 2>&1 | grep -q "no offenses"; then
-        echo -e "${GREEN}OK${NC}"
-    else
-        echo -e "${YELLOW}WARNINGS${NC}"
-        echo "  Run: brew audit --strict Formula/mental-note.rb"
-    fi
+# Check 6: Formula syntax (requires Ruby)
+echo -n "✓ Validating formula syntax (Ruby)... "
+if ruby -c Formula/mental-note.rb > /dev/null 2>&1; then
+    echo -e "${GREEN}OK${NC}"
 else
-    echo -e "${YELLOW}⊘ Skipping formula audit (Homebrew not installed)${NC}"
+    echo -e "${RED}FAIL${NC}"
+    echo "  Ruby syntax error in Formula/mental-note.rb"
+    ruby -c Formula/mental-note.rb
+    exit 1
 fi
 
 # Check 7: Documentation exists
