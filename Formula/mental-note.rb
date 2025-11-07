@@ -10,7 +10,7 @@ class MentalNote < Formula
   # When hosting in GitHub, this will be:
   # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v1.0.0-darwin-arm64.tar.gz
   url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v1.0.0-darwin-arm64.tar.gz"
-  sha256 "596dd0f1edccd1700a58912bea03868f821dcdc8d59c962d586d18ff7af8c06c"
+  sha256 "ccb953a0dfd5171cd55a12d6860146a528c0ce023f2f9704b75492132d8e7e45"
 
   # System requirements
   depends_on :macos
