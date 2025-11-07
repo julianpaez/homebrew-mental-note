@@ -1,0 +1,47 @@
+name: Test Formula
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Homebrew
+        run: |
+          brew update
+
+      - name: Audit formula
+        run: |
+          brew audit --strict Formula/mental-note.rb
+
+      - name: Test formula installation
+        run: |
+          brew install --build-from-source Formula/mental-note.rb
+
+      - name: Test binary execution
+        run: |
+          mental-note --version
+          mn --version
+          mental-note version
+
+      - name: Run formula tests
+        run: |
+          brew test mental-note
+
+      - name: Test basic functionality
+        run: |
+          mn add do "Test task"
+          mn list
+          mn delete 1 --confirm
+
+      - name: Cleanup
+        if: always()
+        run: |
+          brew uninstall mental-note || true
