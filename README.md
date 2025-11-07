@@ -64,7 +64,6 @@ brew untap julianpaez/mental-note
 - **Zero Dependencies**: Uses only Python standard library
 - **Lightweight**: ~7MB binary
 - **Fast**: Instant startup and response
-- **Modern UI**: Unicode-based responsive table rendering
 - **Multiple Actions**: remember, do, contemplate, forget, ignore, stick
 - **Advanced Features**:
   - Task completion tracking
@@ -74,7 +73,6 @@ brew untap julianpaez/mental-note
   - Due date reminders
   - Archive functionality
   - Export/import backups
-
 
 ## System Requirements
 
@@ -90,16 +88,3 @@ MIT License - Copyright (c) 2025 Julian Paez
 
 ---
 
-### Adding Intel Support (Future)
-
-When Intel binaries are available:
-
-```ruby
-if Hardware::CPU.arm?
-  url "https://github.com/.../mental-note-v1.x.x-darwin-arm64.tar.gz"
-  sha256 "arm64_checksum_here"
-elsif Hardware::CPU.intel?
-  url "https://github.com/.../mental-note-v1.x.x-darwin-x86_64.tar.gz"
-  sha256 "intel_checksum_here"
-end
-```
