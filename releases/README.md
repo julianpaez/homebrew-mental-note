@@ -4,10 +4,10 @@ This folder contains the binary distribution files for mental-note CLI.
 
 ## Current Release
 
-**Version:** 1.1.0
+**Version:** 1.2.0
 **Platform:** macOS Apple Silicon (ARM64)
-**File:** `mental-note-v1.1.0-darwin-arm64.tar.gz` (6.9 MB)
-**Checksum:** See `mental-note-v1.1.0-darwin-arm64.tar.gz.sha256`
+**File:** `mental-note-v1.2.0-darwin-arm64.tar.gz` (7.5 MB)
+**Checksum:** See `mental-note-v1.2.0-darwin-arm64.tar.gz.sha256`
 
 ---
 
