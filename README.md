@@ -87,4 +87,3 @@ brew untap julianpaez/mental-note
 MIT License - Copyright (c) 2025 Julian Paez
 
 ---
-
