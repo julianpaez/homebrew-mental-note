@@ -44,7 +44,10 @@ class MentalNote < Formula
         mn badges           # See achievements
         mn version
 
-      New in v1.2.0:
+      New in v1.2.1:
+        • Improved performance and stability
+        • Bug fixes
+        • Tab autocomplete support for bash, zsh, and fish
         • Gamification system with XP, levels, and 60 badges
         • 12 easter eggs to discover
         • Daily streaks tracking
