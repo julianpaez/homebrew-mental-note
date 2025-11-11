@@ -4,13 +4,13 @@ class MentalNote < Formula
   desc "Zero-dependency CLI for managing mental notes, tasks, and ideas with gamification"
   homepage "https://github.com/julianpaez/cli-mental-note"
   license "MIT"
-  version "1.2.0"
+  version "1.2.1"
 
   # Download URL - Points to tar.gz in this repository's releases/ folder
   # When hosting in GitHub, this will be:
-  # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v1.2.0-darwin-arm64.tar.gz
-  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v1.2.0-darwin-arm64.tar.gz"
-  sha256 "e71329ff544a5bcc9b5bc7e43d49af72d373b0729441a66fa7fa22bf3983a6c5"
+  # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v1.2.1-darwin-arm64.tar.gz
+  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v1.2.1-darwin-arm64.tar.gz"
+  sha256 "68b34e7f13aad47bdd80e3cf8bdd829ae5ad74f7371c94a9dd195e239b342d15"
 
   # System requirements
   depends_on :macos
@@ -30,7 +30,7 @@ class MentalNote < Formula
 
   def caveats
     <<~EOS
-      Mental Note CLI v1.2.0 has been installed!
+      Mental Note CLI v1.2.1 has been installed!
 
       You can use either command:
         mental-note --help
@@ -57,8 +57,8 @@ class MentalNote < Formula
 
   test do
     # Test that the binary runs and shows version
-    assert_match "1.2.0", shell_output("#{bin}/mental-note --version")
-    assert_match "1.2.0", shell_output("#{bin}/mn --version")
+    assert_match "1.2.1", shell_output("#{bin}/mental-note --version")
+    assert_match "1.2.1", shell_output("#{bin}/mn --version")
 
     # Test basic functionality
     system "#{bin}/mental-note", "version"
