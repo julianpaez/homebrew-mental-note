@@ -73,6 +73,7 @@ brew untap julianpaez/mental-note
   - Due date reminders
   - Archive functionality
   - Export/import backups
+  - Notification System
 
 ## System Requirements
 

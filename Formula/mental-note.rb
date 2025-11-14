@@ -4,13 +4,13 @@ class MentalNote < Formula
   desc "Zero-dependency CLI for managing mental notes, tasks, and ideas with gamification"
   homepage "https://github.com/julianpaez/cli-mental-note"
   license "MIT"
-  version "1.3.0"
+  version "1.4.0"
 
   # Download URL - Points to tar.gz in this repository's releases/ folder
   # When hosting in GitHub, this will be:
-  # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v1.3.0-darwin-arm64.tar.gz
-  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v1.3.0-darwin-arm64.tar.gz"
-  sha256 "4071fe4fa80866a02924d4088038713871b116f833abaca9d6b7cc3018a459fc"
+  # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v1.4.0-darwin-arm64.tar.gz
+  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v1.4.0-darwin-arm64.tar.gz"
+  sha256 "b34f910358a5edcc1226defdc15871329f9f4bc857441e0ef0d997e83936e48b"
 
   # System requirements
   depends_on :macos
@@ -30,7 +30,7 @@ class MentalNote < Formula
 
   def caveats
     <<~EOS
-      Mental Note CLI v1.2.2 has been installed!
+      Mental Note CLI v1.4.0 has been installed!
 
       You can use either command:
         mental-note --help
@@ -44,8 +44,8 @@ class MentalNote < Formula
         mn badges           # See achievements
         mn version
 
-      New in v1.3.0:
-        • Introduce Alias System
+      New in v1.4.0:
+        • Introduce Notification System
 
       For more information:
         https://github.com/julianpaez/cli-mental-note
@@ -54,8 +54,8 @@ class MentalNote < Formula
 
   test do
     # Test that the binary runs and shows version
-    assert_match "1.3.0", shell_output("#{bin}/mental-note --version")
-    assert_match "1.3.0", shell_output("#{bin}/mn --version")
+    assert_match "1.4.0", shell_output("#{bin}/mental-note --version")
+    assert_match "1.4.0", shell_output("#{bin}/mn --version")
 
     # Test basic functionality
     system "#{bin}/mental-note", "version"
