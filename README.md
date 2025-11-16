@@ -62,7 +62,7 @@ brew untap julianpaez/mental-note
 ## Features
 
 - **Zero Dependencies**: Uses only Python standard library
-- **Lightweight**: ~7MB binary
+- **Lightweight**: ~8MB binary
 - **Fast**: Instant startup and response
 - **Multiple Actions**: remember, do, contemplate, forget, ignore, stick
 - **Advanced Features**:
