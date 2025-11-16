@@ -11,7 +11,6 @@ class MentalNote < Formula
   # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v1.5.0-darwin-arm64.tar.gz
   url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v1.5.0-darwin-arm64.tar.gz"
   sha256 "d187fbfc10608a2eca9fc5990b3e49d44c96a64612a1896e135e68eb2c6f57fe"
-"
 
   # System requirements
   depends_on :macos
