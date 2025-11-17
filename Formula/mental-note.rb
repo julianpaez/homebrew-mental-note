@@ -4,13 +4,13 @@ class MentalNote < Formula
   desc "Zero-dependency CLI for managing mental notes, tasks, and ideas with gamification"
   homepage "https://github.com/julianpaez/cli-mental-note"
   license "MIT"
-  version "1.5.0"
+  version "1.7.0"
 
   # Download URL - Points to tar.gz in this repository's releases/ folder
   # When hosting in GitHub, this will be:
-  # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v1.5.0-darwin-arm64.tar.gz
-  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v1.5.0-darwin-arm64.tar.gz"
-  sha256 "7ef517887f437c605090d9611b704d206af72106c389f70407ffa6141db478df"
+  # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v1.7.0-darwin-arm64.tar.gz
+  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v1.7.0-darwin-arm64.tar.gz"
+  sha256 "6fe201124fc421ccc1bba15bfb10652aec519faa97ce1bb0801c609663359086"
 
   # System requirements
   depends_on :macos
@@ -44,8 +44,8 @@ class MentalNote < Formula
         mn badges           # See achievements
         mn version
 
-      New in v1.5.0:
-        • Include Search and Export
+      New in v1.7.0:
+        • Add projects
 
       For more information:
         https://github.com/julianpaez/cli-mental-note
@@ -54,8 +54,8 @@ class MentalNote < Formula
 
   test do
     # Test that the binary runs and shows version
-    assert_match "1.5.0", shell_output("#{bin}/mental-note --version")
-    assert_match "1.5.0", shell_output("#{bin}/mn --version")
+    assert_match "1.7.0", shell_output("#{bin}/mental-note --version")
+    assert_match "1.7.0", shell_output("#{bin}/mn --version")
 
     # Test basic functionality
     system "#{bin}/mental-note", "version"
