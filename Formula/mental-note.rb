@@ -4,13 +4,13 @@ class MentalNote < Formula
   desc "Zero-dependency CLI for managing mental notes, tasks, and ideas with gamification"
   homepage "https://github.com/julianpaez/cli-mental-note"
   license "MIT"
-  version "1.9.2"
+  version "1.9.3"
 
   # Download URL - Points to tar.gz in this repository's releases/ folder
   # When hosting in GitHub, this will be:
-  # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v1.9.2-darwin-arm64.tar.gz
-  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v1.9.2-darwin-arm64.tar.gz"
-  sha256 "0b4eb0be62de1f5f97e7786ea3eddaa6740010b9a794b36e41939a584a505fa6"
+  # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v1.9.3-darwin-arm64.tar.gz
+  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v1.9.3-darwin-arm64.tar.gz"
+  sha256 "8bb67d445b842fbe5905082c2d33068b47c7e7f18c963eaebc1ebe6a305ac69f"
 
   # System requirements
   depends_on :macos
@@ -30,7 +30,7 @@ class MentalNote < Formula
 
   def caveats
     <<~EOS
-      Mental Note CLI v1.9.2 has been installed!
+      Mental Note CLI v1.9.3 has been installed!
 
       You can use either command:
         mental-note --help
@@ -44,8 +44,8 @@ class MentalNote < Formula
         mn badges           # See achievements
         mn version
 
-      New in v1.9.2:
-        • Short names for commands
+      New in v1.9.3:
+        • fix: Increased content width in list view
 
       For more information:
         https://github.com/julianpaez/cli-mental-note
@@ -54,8 +54,8 @@ class MentalNote < Formula
 
   test do
     # Test that the binary runs and shows version
-    assert_match "1.9.2", shell_output("#{bin}/mental-note --version")
-    assert_match "1.9.2", shell_output("#{bin}/mn --version")
+    assert_match "1.9.3", shell_output("#{bin}/mental-note --version")
+    assert_match "1.9.3", shell_output("#{bin}/mn --version")
 
     # Test basic functionality
     system "#{bin}/mental-note", "version"
