@@ -4,13 +4,13 @@ class MentalNote < Formula
   desc "Zero-dependency CLI for managing mental notes, tasks, and ideas with gamification"
   homepage "https://github.com/julianpaez/cli-mental-note"
   license "MIT"
-  version "1.9.5"
+  version "1.9.6"
 
   # Download URL - Points to tar.gz in this repository's releases/ folder
   # When hosting in GitHub, this will be:
-  # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v1.9.5-darwin-arm64.tar.gz
-  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v1.9.5-darwin-arm64.tar.gz"
-  sha256 "9f77dcf771b4ca7e479b476e9b8a74d31d6383c93bb55aee7fa9b2b72286c48c"
+  # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v1.9.6-darwin-arm64.tar.gz
+  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v1.9.6-darwin-arm64.tar.gz"
+  sha256 "98f04b8dd4025deb67f8a838df9c236e74e3a3ac8355bb8ce2dee3f3a70118f4"
 
   # System requirements
   depends_on :macos
@@ -30,7 +30,7 @@ class MentalNote < Formula
 
   def caveats
     <<~EOS
-      Mental Note CLI v1.9.5 has been installed!
+      Mental Note CLI v1.9.6 has been installed!
 
       You can use either command:
         mental-note --help
@@ -44,8 +44,8 @@ class MentalNote < Formula
         mn badges           # See achievements
         mn version
 
-      New in v1.9.5:
-        • fix: Increased content width in list view
+      New in v1.9.6:
+        • fix: Clipboard command
 
       For more information:
         https://github.com/julianpaez/cli-mental-note
@@ -54,8 +54,8 @@ class MentalNote < Formula
 
   test do
     # Test that the binary runs and shows version
-    assert_match "1.9.5", shell_output("#{bin}/mental-note --version")
-    assert_match "1.9.5", shell_output("#{bin}/mn --version")
+    assert_match "1.9.6", shell_output("#{bin}/mental-note --version")
+    assert_match "1.9.6", shell_output("#{bin}/mn --version")
 
     # Test basic functionality
     system "#{bin}/mental-note", "version"
