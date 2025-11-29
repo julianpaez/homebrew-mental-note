@@ -21,7 +21,7 @@ class MentalNote < Formula
     bin.install "mental-note"
 
     # Create symlink for short alias
-    bin.install_symlink "mental-note", "mn"
+    bin.install_symlink "mental-note" => "mn"
 
     # Install documentation files
     doc.install "README.md" if File.exist?("README.md")
