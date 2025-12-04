@@ -4,13 +4,13 @@ class MentalNote < Formula
   desc "Zero-dependency CLI for managing mental notes, tasks, and ideas with gamification"
   homepage "https://github.com/julianpaez/cli-mental-note"
   license "MIT"
-  version "2.0.1"
+  version "2.0.2"
 
   # Download URL - Points to tar.gz in this repository's releases/ folder
   # When hosting in GitHub, this will be:
-  # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v2.0.1-darwin-arm64.tar.gz
-  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v2.0.1-darwin-arm64.tar.gz"
-  sha256 "5a913655d4ea5edf43413346aad091cede324bdabafef07fa8cec1dcc3d27f77"
+  # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v2.0.2-darwin-arm64.tar.gz
+  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v2.0.2-darwin-arm64.tar.gz"
+  sha256 "f76ace5e4b7dd9fe6da32b44d1cbb4e1e8764a52f222fe3805a48b9d0729d238"
 
   # System requirements
   depends_on :macos
@@ -30,7 +30,7 @@ class MentalNote < Formula
 
   def caveats
     <<~EOS
-      Mental Note CLI v2.0.1 has been installed!
+      Mental Note CLI v2.0.2 has been installed!
 
       You can use either command:
         mental-note --help
@@ -44,7 +44,7 @@ class MentalNote < Formula
         mn badges           # See achievements
         mn version
 
-      New in v2.0.1:
+      New in v2.0.2:
         • fix: date format
 
       For more information:
@@ -54,8 +54,8 @@ class MentalNote < Formula
 
   test do
     # Test that the binary runs and shows version
-    assert_match "2.0.1", shell_output("#{bin}/mental-note --version")
-    assert_match "2.0.1", shell_output("#{bin}/mn --version")
+    assert_match "2.0.2", shell_output("#{bin}/mental-note --version")
+    assert_match "2.0.2", shell_output("#{bin}/mn --version")
 
     # Test basic functionality
     system "#{bin}/mental-note", "version"
