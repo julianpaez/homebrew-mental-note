@@ -4,12 +4,12 @@ class MentalNote < Formula
   desc "Zero-dependency CLI for managing mental notes, tasks, and ideas with gamification"
   homepage "https://github.com/julianpaez/cli-mental-note"
   license "MIT"
-  version "2.0.4"
+  version "2.0.5"
 
   # Download URL - Points to tar.gz in this repository's releases/ folder
   # When hosting in GitHub, this will be:
-  # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v2.0.4-darwin-arm64.tar.gz
-  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v2.0.4-darwin-arm64.tar.gz"
+  # https://github.com/YOUR_USERNAME/homebrew-mental-note/raw/main/releases/mental-note-v2.0.5-darwin-arm64.tar.gz
+  url "https://github.com/julianpaez/homebrew-mental-note/raw/main/releases/mental-note-v2.0.5-darwin-arm64.tar.gz"
   sha256 "68eb1449f674ee8e6f4c8ef26a4354d38f1b8feff0f556aa022dae4e919049b8"
 
   # System requirements
